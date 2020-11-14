@@ -20,6 +20,7 @@
   border-radius: 2px;
   font-weight: bold;
   color: black;
+  animation: appear 1s;
 }
 
 .nav-pills {
@@ -76,7 +77,10 @@
   font-size: 30px;
 }
 
-
+@keyframes appear {
+  from {opacity: 0}
+  to {opacity: 1}
+}
 #a{
   border: 2px solid #b29600;
   color: #b29600;
