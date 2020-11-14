@@ -8,7 +8,7 @@ var albums = [
   {"name": "Pluto x Baby Pluto",
   "artist": "Future, Lil Uzi Vert",
   "release": 2020,
-  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin And Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
+  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin N Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
   },
   {"name": "The Goat",
   "artist": "Polo G",
