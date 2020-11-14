@@ -8,7 +8,7 @@ var albums = [
   {"name": "Pluto x Baby Pluto",
   "artist": "Future, Lil Uzi Vert",
   "release": 2020,
-  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin N' Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
+  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin N Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
   },
   {"name": "The Goat",
   "artist": "Polo G",
@@ -108,8 +108,9 @@ function createEventListeners(){
         node.innerHTML = song.innerHTML
         div.appendChild(node);
 
-        document.getElementById("averageAlert").innerHTML = toLetterGrade();
         song.remove();
+        document.getElementById("averageAlert").innerHTML = toLetterGrade();
+        
 
       } else {
 
@@ -122,8 +123,9 @@ function createEventListeners(){
         node.innerHTML = song.innerHTML
         div.appendChild(node);
         
-        document.getElementById("averageAlert").innerHTML = toLetterGrade();
         song.remove();
+        document.getElementById("averageAlert").innerHTML = toLetterGrade();
+      
   
       }
       createEventListeners();
@@ -146,22 +148,29 @@ function createAlert(alertMessage){
 }
 
 function computeGrade(){
-  var tiers = document.querySelectorAll(".nav-link");
-
+  var songTabs = document.querySelectorAll(".nav-link");
   var grade = 0;
   var count = 0;
 
-  for (var i = 0; i < tiers.length; i++){
-    if (!(tiers[i].parentElement.id == "left")){
-      grade += colorGrades[tiers[i].parentElement.id];
+  for (var i = 0; i < songTabs.length; i++){
+    if (!(songTabs[i].parentElement.id == "left")){
+      grade += colorGrades[songTabs[i].parentElement.id];
       count += 1;
     }
+  }
+
+  if (count == 0){
+    return 0;
   }
   return grade / count;
 }
 
 function toLetterGrade(){
   const userGrade = computeGrade();
+
+  if (userGrade == 0){
+    return "";
+  }
 
   if (userGrade <= 5 && userGrade > (14/3)){
     return "A+";
