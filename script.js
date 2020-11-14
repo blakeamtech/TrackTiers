@@ -8,7 +8,7 @@ var albums = [
   {"name": "Pluto x Baby Pluto",
   "artist": "Future, Lil Uzi Vert",
   "release": 2020,
-  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin N Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
+  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin N' Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
   },
   {"name": "The Goat",
   "artist": "Polo G",
@@ -200,35 +200,65 @@ function removeAlerts(){
   }
 }
 
+function displayAlbum(){
+  userInput = document.getElementById("user-form").value;
+  userAlbum = matchAlbum(userInput);
+
+  if (userAlbum != undefined){
+    var mainTitle = document.getElementsByClassName("jumbotron");
+
+    if (mainTitle.length != 0){
+      mainTitle[0].remove();
+    }
+    removeAlerts();
+    hasChosen = true;
+    createAlert("You have chosen "+userAlbum.name+" by "+userAlbum.artist+".");
+    for (var i = 0; i < userAlbum.tracks.length; i++){
+      var div = document.getElementById("left");
+      var node = document.createElement("A");
+
+      node.className = "nav-link active";
+      node.style.cursor = "pointer";
+      node.id = userAlbum.tracks[i]
+      node.innerHTML = userAlbum.tracks[i];
+      div.appendChild(node);
+
+    }
+    createEventListeners();
+    initializeTiers()
+  }else{
+    createAlert("Album Not Found. Try again.");
+  }
+}
+
+function clearAlbum(){
+  removeAlerts();
+
+  var songTabs = document.querySelectorAll(".nav-link");
+  var tiers = document.querySelectorAll(".tier");
+
+  for (var i = 0; i < songTabs.length; i++){
+    songTabs[i].remove();
+  }
+  for (var i = 0; i < tiers.length; i++){
+    tiers[i].remove();
+  }
+  document.getElementById("averageAlert").remove();
+}
 // Event Listeners
 
 window.addEventListener("keypress", function(){
   if(event.keyCode == 13 && !hasChosen) { //Enter keycode
+    displayAlbum();
+  }else if (event.keyCode == 13 && hasChosen){
     userInput = document.getElementById("user-form").value;
     userAlbum = matchAlbum(userInput);
 
     if (userAlbum != undefined){
-      document.getElementsByClassName("jumbotron")[0].remove();
-      removeAlerts();
-      hasChosen = true;
-      createAlert("You have chosen "+userAlbum.name+" by "+userAlbum.artist+".");
-      for (var i = 0; i < userAlbum.tracks.length; i++){
-        var div = document.getElementById("left");
-        var node = document.createElement("A");
-
-        node.className = "nav-link active";
-        node.style.cursor = "pointer";
-        node.id = userAlbum.tracks[i]
-        node.innerHTML = userAlbum.tracks[i];
-        div.appendChild(node);
-
-      }
-      createEventListeners();
-      initializeTiers()
+      clearAlbum();
+      displayAlbum();
     }else{
       createAlert("Album Not Found. Try again.");
     }
-  }else if (event.keyCode == 13 && hasChosen){
-    createAlert("Refresh the page to rate another album.");
   }
 })
