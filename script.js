@@ -211,7 +211,7 @@ window.addEventListener("keypress", function(){
     userAlbum = matchAlbum(userInput);
 
     if (userAlbum != undefined){
-      document.getElementsByClassName("jumbotron")[0].remove();
+      console.log(document.getElementsByClassName("jumbotron")[0]);
       removeAlerts();
       hasChosen = true;
       createAlert("You have chosen "+userAlbum.name+" by "+userAlbum.artist+".");
