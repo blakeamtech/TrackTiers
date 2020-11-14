@@ -6,6 +6,11 @@ var albums = [
   "release": 2020,
   "tracks": ["Baby Pluto","Lo Mein","Silly Watch","POP","You Better Move","Homecoming","I'm Sorry","Celebration Station","Bigger Than Life","Chrome Heart Tags","Bust Me","Prices","Urgency (feat. Syd)","Venetia","Secure The Bag","P2","Futsal Shuffle 2020 - Bonus Track", "That Way - Bonus Track"]
   },
+  {"name": "Pluto x Baby Pluto",
+  "artist": "Future, Lil Uzi Vert",
+  "release": 2020,
+  "tracks": ["Stripes Like Burberry","Marni On Me","Sleeping On The Floor","Real Baby Pluto","Drankin And Smokin","Million Dollar Play","Plastic","That's It","Bought A Bad Bitch","Rockstar Chainz","Lullaby","She Never Been To Pluto","Off Dat","I Don't Wanna Break Up","Bank Roll","Moment Of Clarity"]
+  },
   {"name": "The Goat",
   "artist": "Polo G",
   "release": 2020,
@@ -22,6 +27,8 @@ var albums = [
   "tracks": ["Canadian Goose","Hi Roller","Money Longer","Grab the Wheel","You Was Right","Baby Are You Home","Ps & Qs","Team Rocket","Scott and Ramona"]
   }
 ];
+
+
 
 const colorGrades = {
   "a": 5,
@@ -58,9 +65,9 @@ function brightenTier(tierId){
 }
 
 function initializeTiers(){
-  const tierNames = ["a","b","c","d","f"];
-
   var div = document.getElementById("right");
+  
+  tierNames = ["a","b","c","d","f"];
   for (var i = 0; i < tierNames.length; i++){
     var tier = document.createElement("DIV");
 
@@ -80,12 +87,12 @@ function initializeTiers(){
       brightenTier(tierColor);
     })
   })
-
   var average = document.createElement("DIV");
 
   average.className = "average";
   average.id = "averageAlert";
   div.append(average);
+
 }
 
 
@@ -104,7 +111,7 @@ function createEventListeners(){
         node.innerHTML = song.innerHTML
         div.appendChild(node);
 
-        document.getElementById("averageAlert").innerHTML = "Your average grade for this album is: "+toLetterGrade()+".";
+        document.getElementById("averageAlert").innerHTML = toLetterGrade();
         song.remove();
 
       } else {
@@ -118,7 +125,7 @@ function createEventListeners(){
         node.innerHTML = song.innerHTML
         div.appendChild(node);
         
-        document.getElementById("averageAlert").innerHTML = "Your average grade for this album is: "+toLetterGrade()+".";
+        document.getElementById("averageAlert").innerHTML = toLetterGrade();
         song.remove();
   
       }
@@ -204,6 +211,7 @@ window.addEventListener("keypress", function(){
     userAlbum = matchAlbum(userInput);
 
     if (userAlbum != undefined){
+      document.getElementsByClassName("jumbotron")[0].remove();
       removeAlerts();
       hasChosen = true;
       createAlert("You have chosen "+userAlbum.name+" by "+userAlbum.artist+".");
