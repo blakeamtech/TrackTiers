@@ -29,6 +29,13 @@
   text-align: center;
 }
 
+#copyright{
+  width: 85%;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+}
+
 .inner-container{
   display: table-row;
 }
