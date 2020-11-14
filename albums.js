@@ -1,4 +1,4 @@
-const albums = [
+var albums = [
   {"name": "Eternal Atake",
   "artist": "Lil Uzi Vert",
   "release": 2020,
