@@ -214,11 +214,6 @@ function displayAlbum(){
   userAlbum = matchAlbum(userInput);
 
   if (userAlbum != undefined){
-    var mainTitle = document.getElementsByClassName("jumbotron");
-
-    if (mainTitle.length != 0){
-      mainTitle[0].remove();
-    }
     removeAlerts();
     hasChosen = true;
     createAlert("You have chosen "+userAlbum.name+" by "+userAlbum.artist+".");
