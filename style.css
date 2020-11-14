@@ -6,6 +6,9 @@
   transform: translateX(-10px);
 }
 
+.jumbotron{
+  transform: translateX(27px);
+}
 .form-control {
   margin: 30px;
 }
@@ -15,6 +18,7 @@
   background: white;
   margin: 10px;
   border-radius: 2px;
+  font-weight: bold;
   color: black;
 }
 
@@ -50,45 +54,50 @@
   margin-top: 5px;
   padding-left: 5px;
   cursor: pointer;
+  font-weight: bold;
   filter: brightness(1);
 }
 
 .average {
-  width: 175px;
+  width: 75px;
   float: right;
   transform: translateX(-15px);
   height:auto;
-  min-height: 100px;
+  min-height: 50px;
   margin-top: 5px;
   color: white;
   padding: 5px;
   border: 2px solid white;
   filter: brightness(1);
   font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 30px;
 }
 
 
 #a{
-  border: 2px solid green;
-  color: green;
+  border: 2px solid #b29600;
+  color: #b29600;
 }
 
 #b{
-  border: 2px solid lightgreen;
-  color: lightgreen;
+  border: 2px solid #75b200;
+  color: #75b200;
 }
 
 #c{
-  border: 2px solid yellow;
-  color: yellow;
+  border: 2px solid 	#ddd75a;
+  color: 	#ddd75a;
 }
 
 #d{
-  border: 2px solid #ffcccb;
-  color: #ffcccb;
+  border: 2px solid #f8bc4c;
+  color: #f8bc4c;
 }
 
 #f{
-  border: 2px solid red;
-  color: red;
+  border: 2px solid #e56565;
+  color: #e56565;
 }
