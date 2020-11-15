@@ -33,7 +33,7 @@ var albums = [
   {"name": "Rodeo",
   "artist": "Travis Scott",
   "release": 2015,
-  "tracks": ["Pornography","Oh My Dis Side","3500","Wasted","90210","Pray 4 Love","Nightcrawler","Piss on Your Grave","Antidote","Impossible","Maria I'm Drunk","Flying High","I Can Tell","Apple Pie","OK Alright","Never Catch Me"}
+  "tracks": ["Pornography","Oh My Dis Side","3500","Wasted","90210","Pray 4 Love","Nightcrawler","Piss on Your Grave","Antidote","Impossible","Maria I'm Drunk","Flying High","I Can Tell","Apple Pie","OK Alright","Never Catch Me"]
   }
 ];
 
