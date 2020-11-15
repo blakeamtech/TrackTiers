@@ -29,6 +29,11 @@ var albums = [
   "artist": "Guns N Roses",
   "release": 1987,
   "tracks": ["Welcome to the Jungle","It's So Easy","Nightrain","Out Ta Get Me","Mr. Brownstone","Paradise City","My Michelle","Think About You","Sweet Child O' Mine","You're Crazy","Anything Goes","Rocket Queen"]
+  },
+  {"name": "Rodeo",
+  "artist": "Travis Scott",
+  "release": 2015,
+  "tracks": ["Pornography","Oh My Dis Side","3500","Wasted","90210","Pray 4 Love","Nightcrawler","Piss on Your Grave","Antidote","Impossible","Maria I'm Drunk","Flying High","I Can Tell","Apple Pie","OK Alright","Never Catch Me"}
   }
 ];
 
