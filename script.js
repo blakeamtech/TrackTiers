@@ -24,6 +24,11 @@ var albums = [
   "artist": "Lil Uzi Vert",
   "release": 2016,
   "tracks": ["Canadian Goose","Hi Roller","Money Longer","Grab the Wheel","You Was Right","Baby Are You Home","Ps & Qs","Team Rocket","Scott and Ramona"]
+  },
+  {"name": "Appetite for Destruction",
+  "artist": "Guns N Roses",
+  "release": 1987,
+  "tracks": ["Welcome to the Jungle","It's So Easy","Nightrain","Out Ta Get Me","Mr. Brownstone","Paradise City","My Michelle","Think About You","Sweet Child O' Mine","You're Crazy","Anything Goes","Rocket Queen"]
   }
 ];
 
