@@ -49,6 +49,11 @@ var albums = [
   "artist": "Travis Scott",
   "release": 2014,
   "tracks": ["Days Before Rodeo: The Prayer","Mamacita","Quintana, Part 2","Drugs You Should Try It","Don't Play","Skyfall","Zombies","Sloppy Toppy","Basement Freestyle","Backyard","Grey","BACC"]
+  },
+  {"name": "Graduation",
+  "artist": "Kanye West",
+  "release": 2007,
+  "tracks": ["Good Morning","Champion","Stronger","I Wonder","Good Life","Can't Tell Me Nothing","Barry Bonds","Drunk and Hot Girls","Flashing Lights","Everything I Am","The Glory","Homecoming","Big Brother","Good Night","Bittersweet Poetry"]
   }
 ];
 
