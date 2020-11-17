@@ -38,7 +38,7 @@ var albums = [
   {"name": "Astroworld",
   "artist": "Travis Scott",
   "release": 2018,
-  "tracks": ["Astroworld","Carousel","Sicko Mode","R.I.P Screw","Stop Trying to be God","No Bystanders","Skeletons","Wake Up","5% Tint","NC-17","Astrothunder","Yosemite","Can't Say","Who?What?","Butterfly Effect","Houstonfornication","Coffee Bean"]
+  "tracks": ["Stargazing","Carousel","Sicko Mode","R.I.P Screw","Stop Trying to be God","No Bystanders","Skeletons","Wake Up","5% Tint","NC-17","Astrothunder","Yosemite","Can't Say","Who?What?","Butterfly Effect","Houstonfornication","Coffee Bean"]
   },
   {"name": "Birds in the Trap Sing McKnight",
   "artist": "Travis Scott",
