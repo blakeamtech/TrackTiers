@@ -54,6 +54,11 @@ var albums = [
   "artist": "Kanye West",
   "release": 2007,
   "tracks": ["Good Morning","Champion","Stronger","I Wonder","Good Life","Can't Tell Me Nothing","Barry Bonds","Drunk and Hot Girls","Flashing Lights","Everything I Am","The Glory","Homecoming","Big Brother","Good Night","Bittersweet Poetry"]
+  },
+  {"name": "Electra Heart",
+  "artist": "Marina and the Diamonds",
+  "release": 2012,
+  "tracks": ["Bubblegum Bitch","Primadonna","Lies","Homewrecker","Starring Role","The State of Dreaming","Power & Control","Living Dead","Teen Idle","Valley of the Dolls","Hypocrates","Fear and Loathing","Radioactive","Sex Yeah","Lonely Hearts Club","Buy the Stars"]
   }
 ];
 
