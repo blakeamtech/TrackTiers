@@ -34,6 +34,21 @@ var albums = [
   "artist": "Travis Scott",
   "release": 2015,
   "tracks": ["Pornography","Oh My Dis Side","3500","Wasted","90210","Pray 4 Love","Nightcrawler","Piss on Your Grave","Antidote","Impossible","Maria I'm Drunk","Flying High","I Can Tell","Apple Pie","OK Alright","Never Catch Me"]
+  },
+  {"name": "Astroworld",
+  "artist": "Travis Scott",
+  "release": 2018,
+  "tracks": ["Astroworld","Carousel","Sicko Mode","R.I.P Screw","Stop Trying to be God","No Bystanders","Skeletons","Wake Up","5% Tint","NC-17","Astrothunder","Yosemite","Can't Say","Who?What?","Butterfly Effect","Houstonfornication","Coffee Bean"]
+  },
+  {"name": "Birds in the Trap Sing McKnight",
+  "artist": "Travis Scott",
+  "release": 2016,
+  "tracks": ["the ends","way back","coordinate","through the late night","beibs in the trap","sdp interlude","sweet sweet","outside","goosebumps","first take","pick up the phone","lose","guidance","wonderful"]
+  },
+  {"name": "Days Before Rodeo",
+  "artist": "Travis Scott",
+  "release": 2014,
+  "tracks": ["Days Before Rodeo: The Prayer","Mamacita","Quintana, Part 2","Drugs You Should Try It","Don't Play","Skyfall","Zombies","Sloppy Toppy","Basement Freestyle","Backyard","Grey","BACC"]
   }
 ];
 
