@@ -1,10 +1,6 @@
 const setTime = new Date(2020,11,18)
 
-var days = document.getElementById("days");
-var hours = document.getElementById("hours");
-var minutes = document.getElementById("minutes");
-var seconds = document.getElementById("seconds");
-
+// Function to compute the time between now and the release date.
 function computeGap(setTime){
 
   let timeGap = (setTime.getTime()-Date.now()) / 1000;
@@ -18,11 +14,15 @@ function computeGap(setTime){
   timeGap -= minutes*60;
 
   seconds = Math.floor(timeGap);
+  
+  // store data in a readable format.
   return {'days': days, 'hours':hours, 'minutes':minutes,'seconds':seconds};
 }
 
 function updateCountdown(){
   timeGap = computeGap(setTime);
+  
+  // If a time value is less than 10, append a 0.
   Object.keys(timeGap).forEach(time => {
     if (timeGap[time] >= 10){
       timeGap[time] = timeGap[time].toString();
@@ -37,5 +37,5 @@ function updateCountdown(){
 }
 
 window.addEventListener("DOMContentLoaded",function(){
-  setInterval(updateCountdown,1000);
+  setInterval(updateCountdown,1000); // Call updateCountdown every second to update the clock.
 });
