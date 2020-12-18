@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TrackTiers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cyborg/bootstrap.min.css" integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="ttlogo.png" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class = "container">
+      <div class="jumbotron">
+        <h1 class="display-3" id = "heading"><img src = "ttlogo.png" id = "logo">TrackTiers</h1>
+        <p class="lead" id = "tagline">Taking your music to the next level.</p>
+        <p id = "description">With TrackTiers, search for an album, whose tracks will appear — it's your job to rank them. Show off your music online by sharing with our download feature.</p>
+        
+        <p id = "copyright">© TrackTiers 2020</p>
+      </div>
+      <div class = "search-bar">
+        <button type="button" class="btn btn-primary" id = "search-button"><i class="fas fa-search"></i></button>
+        <input class="form-control mr-sm-2" id = "user-form"  type="text" placeholder="Search. Rank. Share."></input>
+        <button type="button" class="btn btn-primary" id ="random-button"><i class="fas fa-random"></i>  Pick Random Album</button>
+        <p id = "spotify-tagline">Powered by <i class="fab fa-spotify" id = "spotify"></i></p>
+      </div>
+
+      <div>
+
+        <div id = "alert-messages"></div>
+  
+        <div class = "inner-container">
+          <div class = "column" id = "left">
+          </div>
+
+          <div class = "column" id = "right">
+          </div>
+        </div>
+      </div> 
+      <div class = "social-media">
+          <p id = "contact-tagline">Contact Us</p>
+          <a href = "https://www.instagram.com/tracktiers/" target = "_blank"><i class="fab fa-instagram" id = "instagram"></i></a>
+          <a href = "https://twitter.com/tracktiers" target = "_blank">
+          <i class="fab fa-twitter" id = "twitter"></i>
+          </a>
+          <a href = "https://www.tiktok.com/@tracktiers" target = "_blank">
+          <i class="fab fa-tiktok" id = "tiktok"></i>
+          </a>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cbff2e6734.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js" integrity="sha512-8WAv/Z7UaDv0U1DCJ3W1oul76HOvq2/9mc+IbOZGsTj9iwZnnCXL/0FS6GQKNR++krdfVn9kuAAQ6v2DqZ9uEQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="graphicGen.js"></script>
+  </body>
+</html>
