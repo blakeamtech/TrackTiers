@@ -523,7 +523,7 @@ randomButton.addEventListener("click", function() {
 })
 
 document.getElementById("search-button").addEventListener("click", function() {
-    // Handles user searches.
+    // Handles user searches (clicks search button).
     const album_name = document.getElementById("user-form").value;
     if (album_name.length != 0) {
         presearch().then(function(token) {
@@ -546,4 +546,31 @@ document.getElementById("search-button").addEventListener("click", function() {
         });
     }
 })
+
+document.addEventListener("keypress", function() {
+    // Handles user searches (pressed by enter key).
+    if (event.which == 13){
+      const album_name = document.getElementById("user-form").value;
+      if (album_name.length != 0) {
+          presearch().then(function(token) {
+              searchForItem(token, convertString(album_name)).then(function(albums) {
+                  if (albums.length == 0) {
+                      createAlert("Album Not Found.");
+                  } else {
+                      clearAlbum();
+                      for (var i = 0; i < albums.length; i++) {
+                          createAlbumTab(albums[i]);
+                      }
+                      var albums = document.querySelectorAll(".card");
+                      albums.forEach(album => {
+                          album.addEventListener("click", function() {
+                              albumEvent(album.id);
+                          })
+                      })
+                  }
+              });
+          });
+      }
+    }
+});
 
