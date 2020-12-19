@@ -253,6 +253,7 @@ function displayAlbum(array) {
         if (!isEmpty) {
             getGraphic(data.name, data.artists[0], data.year, getFeaturedTracks(['a', 'b', 'c', 'd', 'f']));
         }
+  
     })
 }
 
@@ -521,6 +522,15 @@ randomButton.addEventListener("click", function() {
         })
     })
 })
+function isCompatible(){
+  if (document.createElement('canvas').getContext){
+    return true;
+  }
+  return false;
+}
+if (!isCompatible()){
+  alert("Your browser is not compatible, so you might not be able to use every feature of TrackTiers. Please update your browser or use another device.")
+}
 
 document.getElementById("search-button").addEventListener("click", function() {
     // Handles user searches (clicks search button).
@@ -528,8 +538,8 @@ document.getElementById("search-button").addEventListener("click", function() {
     if (album_name.length != 0) {
         presearch().then(function(token) {
             searchForItem(token, convertString(album_name)).then(function(albums) {
-                if (albums.length == 0) {
-                    createAlert("Album Not Found.");
+                if (albums == null) {
+                    createAlert("Album Not Found. Try again.");
                 } else {
                     clearAlbum();
                     for (var i = 0; i < albums.length; i++) {
@@ -545,7 +555,7 @@ document.getElementById("search-button").addEventListener("click", function() {
             });
         });
     }
-})
+});
 
 document.addEventListener("keypress", function() {
     // Handles user searches (pressed by enter key).
@@ -554,8 +564,8 @@ document.addEventListener("keypress", function() {
       if (album_name.length != 0) {
           presearch().then(function(token) {
               searchForItem(token, convertString(album_name)).then(function(albums) {
-                  if (albums.length == 0) {
-                      createAlert("Album Not Found.");
+                  if (albums == null) {
+                      createAlert("Album Not Found. Try again.");
                   } else {
                       clearAlbum();
                       for (var i = 0; i < albums.length; i++) {
@@ -573,4 +583,3 @@ document.addEventListener("keypress", function() {
       }
     }
 });
-
