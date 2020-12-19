@@ -136,6 +136,6 @@ function getGraphic(title, artist, year, songs) { // Generates the graphic for t
     }
 
     const dataURL = canvas.toDataURL();
-    document.getElementById("download-button").href = dataURL;
+    document.getElementById("download-button").href = dataURL.replace("image/png", "image/octet-stream");
     document.getElementById("download-button").download = "tracktiers.png";
 }
