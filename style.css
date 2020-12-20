@@ -142,12 +142,11 @@ img {
 
 #search-button {
   display: table-cell;
-  transform: translateX(-3px);
+  transform: translateX(4px);
 }
 
 #random-button {
   display: table-cell;
-  transform: translateX(5px);
 }
 
 /* Headings, taglines, and other text elements*/
